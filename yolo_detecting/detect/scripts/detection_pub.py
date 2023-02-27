@@ -28,7 +28,6 @@ def detectAndDisplay(frame):
     #cv2.imshow("Original Image", img)
     print("\n Object detection progressing.... \n")
 
-    #-- 창 크기 설정
     blob = cv2.dnn.blobFromImage(img, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
 
     net.setInput(blob)
@@ -36,7 +35,7 @@ def detectAndDisplay(frame):
     if cnt == 0:
         time.sleep(4)
         cnt +=1
-    #-- 탐지한 객체의 클래스 예측 
+   
     class_ids = []
     confidences = []
     boxes = []
@@ -48,7 +47,7 @@ def detectAndDisplay(frame):
             class_id = np.argmax(scores)
             confidence = scores[class_id]
             if confidence > min_confidence:
-                # 탐지한 객체 박싱
+      
                 center_x = int(detection[0] * width)
                 center_y = int(detection[1] * height)
                 w = int(detection[2] * width)
@@ -74,7 +73,7 @@ def detectAndDisplay(frame):
 
 
 
-            if(pub.get_num_connections()==0):#퍼블리셔 객체와 연결된 커넥션의 개수를 반환
+            if(pub.get_num_connections()==0):
                 pass
             #classes[class_ids[i]]== 'car':
             pub.publish(label)
@@ -82,7 +81,7 @@ def detectAndDisplay(frame):
           #  
         #        print("\n\n\ni found CAR!\n\n\n")
             
-            color = colors[i] #-- 경계 상자 컬러 설정 / 단일 생상 사용시 (255,255,255)사용(B,G,R)
+            color = colors[i] 
             cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
             cv2.putText(img, label, (x, y - 5), font, 1, color, 1)
     end_time = time.time()
@@ -90,16 +89,16 @@ def detectAndDisplay(frame):
   #  print("=== A frame took {:.3f} seconds".format(process_time))
     cv2.imshow("Car detection", img)
     
-#-- yolo 포맷 및 클래스명 불러오기
-model_file = '/home/yongs/darknet/weights/yolov4_final.weights' #-- 본인 개발 환경에 맞게 변경할 것
-config_file = '/home/yongs/darknet/cfg/yolov4.cfg' #-- 본인 개발 환경에 맞게 변경할 것
+
+model_file = '/home/yongs/darknet/weights/yolov4_final.weights' 
+config_file = '/home/yongs/darknet/cfg/yolov4.cfg' 
 net = cv2.dnn.readNet(model_file, config_file)
 
-#-- GPU 사용
+
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
 
-#-- 클래스(names파일) 오픈 / 본인 개발 환경에 맞게 변경할 것
+
 classes = []
 with open("/home/yongs/darknet/obj.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
@@ -107,8 +106,8 @@ layer_names = net.getLayerNames()
 output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
 colors = np.random.uniform(0, 255, size=(len(classes)*2000, 3))
 
-#-- 비디오 활성화
-cap = cv2.VideoCapture('/home/yongs/Downloads/IMG_0094.MOV') #-- 웹캠 사용시 vedio_path를 0 으로 변경
+
+cap = cv2.VideoCapture('/home/yongs/Downloads/IMG_0094.MOV') 
 if not cap.isOpened:
     print('--(!)Error opening video capture')
     exit(0)
@@ -119,7 +118,7 @@ while True:
         print('--(!) No captured frame -- Break!')
         break
     detectAndDisplay(frame)
-    #-- q 입력시 종료
+ 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
