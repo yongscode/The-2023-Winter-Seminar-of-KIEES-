@@ -47,13 +47,18 @@ Software version :
 The repository consists of catkin_work space in the ROS Melodic environment of Ubuntu 18.04 on top of Jetson nano.
 
 
-## Line detection
+# Lane detection
 Image mask filters were manufactured and applied to vehicles to detect only lanes in camera image data. And I got the Trainging data set used Operataion driving of ROS flamework
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/8xpcBJZ/test-00031.png" alt="test-00031" border="0"></a>
 
 [Training data from remote drivig of cars with image mask applied]
 
+# Predict Lane angle
+
+The project contains predict angle by using colab included tensorflow, scikt-learn, etc... I made customize wieght file. Here are loss chart and results.
+
+https://user-images.githubusercontent.com/65767592/221597486-8d7c2d86-d897-4997-8299-a0b3938b7493.jpg
 
 After converting the existing RGB image into a YUV color space, Gaussian blur and threshold processing are performed to detect only the lane as an image. The reason for using the YUV filter is that it can perform gray scale more efficiently than RGB data. RGB data has a large amount of data to be processed.
 
