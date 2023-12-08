@@ -55,7 +55,11 @@ Image mask filters were manufactured and applied to vehicles to detect only lane
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/8xpcBJZ/test-00031.png" alt="test-00031" border="0"></a>
 
-Training data from remote drivig of cars with image mask applied
+[Training data from remote drivig of cars with image mask applied]
+
+
+After converting the existing RGB image into a YUV color space, Gaussian blur and threshold processing are performed to detect only the lane as an image. The reason for using the YUV filter is that it can perform gray scale more efficiently than RGB data. RGB data has a large amount of data to be processed.
+
 
 
 
