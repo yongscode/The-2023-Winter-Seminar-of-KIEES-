@@ -46,9 +46,6 @@ Software version :
 
 The repository consists of catkin_work space in the ROS Melodic environment of Ubuntu 18.04 on top of Jetson nano.
 
-## Lane Following Assist(LFA)
-
-Line detection is divided two part to Lane Detection and Lane Keeping. 
 
 # Line detection
 Image mask filters were manufactured and applied to vehicles to detect only lanes in camera image data. And I got the Trainging data set used Operataion driving of ROS flamework
