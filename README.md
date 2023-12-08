@@ -1,6 +1,6 @@
 # The 2023 Winter Seminar of KIEES
 
-![car]<a href="https://imgbb.com/"><img src="https://i.ibb.co/ZzGK08w/image.png" alt="image" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/ZzGK08w/image.png" alt="image" border="0"></a>
 
 ## Overview
 
