@@ -63,7 +63,7 @@ The project contains predict angle by using colab included tensorflow, scikt-lea
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/b6Wfk5P/2.png" alt="2" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/m9m8GCL/3.png" alt="3" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/jzfhjsx/4.png" alt="4" border="0"></a>
-<a href="https://ibb.co/R7sYcgZ"><img src="https://i.ibb.co/25CWdFm/image.png" alt="image" border="0"></a>
+<a href="https://ibb.co/R7sYcgZ"><img src="https://i.ibb.co/25CWdFm/image.png" width ="60%" height="70%" alt="image" border="0"></a>
 
 
 
