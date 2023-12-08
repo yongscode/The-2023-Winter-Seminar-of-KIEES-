@@ -54,13 +54,17 @@ Image mask filters were manufactured and applied to vehicles to detect only lane
 
 [Training data from remote drivig of cars with image mask applied]
 
+After converting the existing RGB image into a YUV color space, Gaussian blur and threshold processing are performed to detect only the lane as an image. The reason for using the YUV filter is that it can perform gray scale more efficiently than RGB data. RGB data has a large amount of data to be processed.
+
 # Predict Lane angle
 
 The project contains predict angle by using colab included tensorflow, scikt-learn, etc... I made customize wieght file. Here are loss chart and results.
 
-https://user-images.githubusercontent.com/65767592/221597486-8d7c2d86-d897-4997-8299-a0b3938b7493.jpg
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/b6Wfk5P/2.png" alt="2" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/m9m8GCL/3.png" alt="3" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/jzfhjsx/4.png" alt="4" border="0"></a>
+<a href="https://ibb.co/R7sYcgZ"><img src="https://i.ibb.co/25CWdFm/image.png" alt="image" border="0"></a>
 
-After converting the existing RGB image into a YUV color space, Gaussian blur and threshold processing are performed to detect only the lane as an image. The reason for using the YUV filter is that it can perform gray scale more efficiently than RGB data. RGB data has a large amount of data to be processed.
 
 
 
