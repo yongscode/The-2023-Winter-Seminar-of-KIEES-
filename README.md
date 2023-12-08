@@ -54,7 +54,8 @@ Line detection is divided two part to Lane Detection and Lane Keeping.
 Image mask filters were manufactured and applied to vehicles to detect only lanes in camera image data. And I got the Trainging data set used Operataion driving of ROS flamework
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/8xpcBJZ/test-00031.png" alt="test-00031" border="0"></a>
-Training data from cars with image mask applied
+
+Training data from remote drivig of cars with image mask applied
 
 
 
