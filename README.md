@@ -7,10 +7,11 @@
 
 The purpose of this project is to implement for auto-moobile function of safety.
 
-This Reposit includes a code that implements the autonomous ADAS function for implementing motion control of RC car, including remote control and automatic movement. 
+This Reposit includes a code that implements the autonomous Advanced Driver Assistance System(ADAS) function for implementing motion control of RC car, including remote control and automatic movement. These codes will most likely not work unless they are in the Ubunto 18.04, ROS melodic framework, and we recommend that you use them in the same way, referring to the **Software Version** specified below.
 
-Hardware: 1:10 scale RC cars
+**Hardware:** 
 
+1:10 scale RC cars
 
 * Computer : JetsonNano
 
@@ -25,7 +26,7 @@ Hardware: 1:10 scale RC cars
 * other: XL4015 dc-dc stepdown converter
 
 
-Software: C++,Python
+**Software: C++,Python**
 
 Software version :
 
@@ -44,5 +45,17 @@ Software version :
 * ROS Melodic
 
 The repository consists of catkin_work space in the ROS Melodic environment of Ubuntu 18.04 on top of Jetson nano.
+
+## Lane Following Assist(LFA)
+
+Line detection is divided two part to Lane Detection and Lane Keeping. 
+
+# Line detection
+Image mask filters were manufactured and applied to vehicles to detect only lanes in camera image data. And I got the Trainging data set used Operataion driving of ROS flamework
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/8xpcBJZ/test-00031.png" alt="test-00031" border="0"></a>
+Training data from cars with image mask applied
+
+
 
 
